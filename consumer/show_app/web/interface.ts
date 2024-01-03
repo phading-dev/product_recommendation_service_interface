@@ -1,5 +1,5 @@
 import { MessageDescriptor, PrimitiveType } from '@selfage/message/descriptor';
-import { ShowSnapshot, SHOW_SNAPSHOT } from '@phading/product_service_interface/consumer/show/show';
+import { ShowSnapshot, SHOW_SNAPSHOT } from '@phading/product_service_interface/consumer/show_app/show';
 import { ServiceDescriptor } from '@selfage/service_descriptor';
 import { WEB_CLIENT_SESSION } from '@phading/user_session_service_interface/web_client_session';
 
