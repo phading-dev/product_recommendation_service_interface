@@ -10,7 +10,7 @@
   "name": "RecommendShowsResponse",
   "message": {
     "fields": [{
-      "name": "show",
+      "name": "shows",
       "type": "ShowSnapshot",
       "import": "@phading/product_service_interface/consumer/show_app/show",
       "isArray": true

@@ -18,14 +18,14 @@ export let RECOMMEND_SHOWS_REQUEST_BODY: MessageDescriptor<RecommendShowsRequest
 };
 
 export interface RecommendShowsResponse {
-  show?: Array<ShowSnapshot>,
+  shows?: Array<ShowSnapshot>,
 }
 
 export let RECOMMEND_SHOWS_RESPONSE: MessageDescriptor<RecommendShowsResponse> = {
   name: 'RecommendShowsResponse',
   fields: [
     {
-      name: 'show',
+      name: 'shows',
       messageType: SHOW_SNAPSHOT,
       isArray: true,
     },
