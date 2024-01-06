@@ -18,7 +18,7 @@ export let RECOMMEND_SHOWS_REQUEST_BODY: MessageDescriptor<RecommendShowsRequest
 };
 
 export interface RecommendShowsResponse {
-  show?: ShowSnapshot,
+  show?: Array<ShowSnapshot>,
 }
 
 export let RECOMMEND_SHOWS_RESPONSE: MessageDescriptor<RecommendShowsResponse> = {
@@ -27,6 +27,7 @@ export let RECOMMEND_SHOWS_RESPONSE: MessageDescriptor<RecommendShowsResponse> =
     {
       name: 'show',
       messageType: SHOW_SNAPSHOT,
+      isArray: true,
     },
   ]
 };

@@ -12,7 +12,8 @@
     "fields": [{
       "name": "show",
       "type": "ShowSnapshot",
-      "import": "@phading/product_service_interface/consumer/show_app/show"
+      "import": "@phading/product_service_interface/consumer/show_app/show",
+      "isArray": true
     }]
   }
 }, {
