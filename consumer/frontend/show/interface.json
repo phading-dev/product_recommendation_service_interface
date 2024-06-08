@@ -1,0 +1,44 @@
+[{
+  "name": "Context",
+  "message": {
+    "fields": [{
+      "name": "publisherId",
+      "type": "string"
+    }, {
+      "name": "seriesId",
+      "type": "string"
+    }]
+  }
+}, {
+  "name": "RecommendSeasonsRequestBody",
+  "message": {
+    "fields": [{
+      "name": "seasonId",
+      "type": "string"
+    }]
+  }
+}, {
+  "name": "RecommendSeasonsResponse",
+  "message": {
+    "fields": [{
+      "name": "seasons",
+      "type": "SeasonView",
+      "import": "./season_view",
+      "isArray": true
+    }]
+  }
+}, {
+  "name": "RecommendSeasons",
+  "service": {
+    "path": "/RecommendSeasons",
+    "body": "RecommendSeasonsRequestBody",
+    "auth": {
+      "key": "auth",
+      "type": "WebClientSession",
+      "import": "@phading/user_session_service_interface/web_client_session"
+    },
+    "response": "RecommendSeasonsResponse",
+    "outputWebClient": "./client_requests",
+    "outputHandler": "./server_handlers"
+  }
+}]

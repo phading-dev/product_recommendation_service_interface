@@ -1,0 +1,37 @@
+[{
+  "name": "ContinueEpisode",
+  "message": {
+    "fields": [{
+      "name": "episodeId",
+      "type": "string"
+    }, {
+      "name": "name",
+      "type": "string"
+    }]
+  }
+}, {
+  "name": "SeasonView",
+  "message": {
+    "fields": [{
+      "name": "seasonId",
+      "type": "string"
+    }, {
+      "name": "name",
+      "type": "string"
+    }, {
+      "name": "coverImagePath",
+      "type": "string"
+    }, {
+      "name": "grade",
+      "type": "number",
+      "comment": "Small number means low quality and price."
+    }, {
+      "name": "continueEpisode",
+      "type": "ContinueEpisode"
+    }, {
+      "name": "publisher",
+      "type": "PublisherSnapshot",
+      "import": "../publisher_snapshot"
+    }]
+  }
+}]
