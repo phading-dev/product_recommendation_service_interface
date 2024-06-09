@@ -10,7 +10,7 @@
     }]
   }
 }, {
-  "name": "SeasonView",
+  "name": "SeasonCover",
   "message": {
     "fields": [{
       "name": "seasonId",
@@ -31,7 +31,7 @@
     }, {
       "name": "publisher",
       "type": "PublisherSnapshot",
-      "import": "../publisher_snapshot"
+      "import": "./publisher_snapshot"
     }]
   }
 }]

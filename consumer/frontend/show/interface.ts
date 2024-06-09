@@ -1,7 +1,7 @@
 import { MessageDescriptor, PrimitiveType } from '@selfage/message/descriptor';
-import { SeasonView, SEASON_VIEW } from './season_view';
+import { SeasonCover, SEASON_COVER } from './season_cover';
 import { ServiceDescriptor } from '@selfage/service_descriptor';
-import { WEB_CLIENT_SESSION } from '@phading/user_session_service_interface/web_client_session';
+import { CLIENT_SESSION } from '@phading/user_session_service_interface/client_session';
 
 export interface Context {
   publisherId?: string,
@@ -37,7 +37,7 @@ export let RECOMMEND_SEASONS_REQUEST_BODY: MessageDescriptor<RecommendSeasonsReq
 };
 
 export interface RecommendSeasonsResponse {
-  seasons?: Array<SeasonView>,
+  seasons?: Array<SeasonCover>,
 }
 
 export let RECOMMEND_SEASONS_RESPONSE: MessageDescriptor<RecommendSeasonsResponse> = {
@@ -45,7 +45,7 @@ export let RECOMMEND_SEASONS_RESPONSE: MessageDescriptor<RecommendSeasonsRespons
   fields: [
     {
       name: 'seasons',
-      messageType: SEASON_VIEW,
+      messageType: SEASON_COVER,
       isArray: true,
     },
   ]
@@ -59,7 +59,7 @@ export let RECOMMEND_SEASONS: ServiceDescriptor = {
   },
   auth: {
     key: "auth",
-    type: WEB_CLIENT_SESSION
+    type: CLIENT_SESSION
   },
   response: {
     messageType: RECOMMEND_SEASONS_RESPONSE,

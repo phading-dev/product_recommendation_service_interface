@@ -1,5 +1,5 @@
 import { MessageDescriptor, PrimitiveType } from '@selfage/message/descriptor';
-import { PublisherSnapshot, PUBLISHER_SNAPSHOT } from '../publisher_snapshot';
+import { PublisherSnapshot, PUBLISHER_SNAPSHOT } from './publisher_snapshot';
 
 export interface ContinueEpisode {
   episodeId?: string,
@@ -20,7 +20,7 @@ export let CONTINUE_EPISODE: MessageDescriptor<ContinueEpisode> = {
   ]
 };
 
-export interface SeasonView {
+export interface SeasonCover {
   seasonId?: string,
   name?: string,
   coverImagePath?: string,
@@ -30,8 +30,8 @@ export interface SeasonView {
   publisher?: PublisherSnapshot,
 }
 
-export let SEASON_VIEW: MessageDescriptor<SeasonView> = {
-  name: 'SeasonView',
+export let SEASON_COVER: MessageDescriptor<SeasonCover> = {
+  name: 'SeasonCover',
   fields: [
     {
       name: 'seasonId',

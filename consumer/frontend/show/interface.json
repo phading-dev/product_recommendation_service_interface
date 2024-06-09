@@ -22,8 +22,8 @@
   "message": {
     "fields": [{
       "name": "seasons",
-      "type": "SeasonView",
-      "import": "./season_view",
+      "type": "SeasonCover",
+      "import": "./season_cover",
       "isArray": true
     }]
   }
@@ -34,8 +34,8 @@
     "body": "RecommendSeasonsRequestBody",
     "auth": {
       "key": "auth",
-      "type": "WebClientSession",
-      "import": "@phading/user_session_service_interface/web_client_session"
+      "type": "ClientSession",
+      "import": "@phading/user_session_service_interface/client_session"
     },
     "response": "RecommendSeasonsResponse",
     "outputWebClient": "./client_requests",
