@@ -1,4 +1,18 @@
 [{
+  "name": "PublisherSnapshot",
+  "message": {
+    "fields": [{
+      "name": "accountId",
+      "type": "string"
+    }, {
+      "name": "naturalName",
+      "type": "string"
+    }, {
+      "name": "avatarSmallPath",
+      "type": "string"
+    }]
+  }
+}, {
   "name": "ContinueEpisode",
   "message": {
     "fields": [{
@@ -10,7 +24,7 @@
     }]
   }
 }, {
-  "name": "SeasonCover",
+  "name": "SeasonSnapshot",
   "message": {
     "fields": [{
       "name": "seasonId",
@@ -30,8 +44,7 @@
       "type": "ContinueEpisode"
     }, {
       "name": "publisher",
-      "type": "PublisherSnapshot",
-      "import": "./publisher_snapshot"
+      "type": "PublisherSnapshot"
     }]
   }
 }]

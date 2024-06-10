@@ -22,8 +22,8 @@
   "message": {
     "fields": [{
       "name": "seasons",
-      "type": "SeasonCover",
-      "import": "./season_cover",
+      "type": "SeasonSnapshot",
+      "import": "./season_snapshot",
       "isArray": true
     }]
   }

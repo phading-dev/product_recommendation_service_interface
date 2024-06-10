@@ -1,5 +1,5 @@
 import { MessageDescriptor, PrimitiveType } from '@selfage/message/descriptor';
-import { SeasonCover, SEASON_COVER } from './season_cover';
+import { SeasonSnapshot, SEASON_SNAPSHOT } from './season_snapshot';
 import { ServiceDescriptor } from '@selfage/service_descriptor';
 import { CLIENT_SESSION } from '@phading/user_session_service_interface/client_session';
 
@@ -37,7 +37,7 @@ export let RECOMMEND_SEASONS_REQUEST_BODY: MessageDescriptor<RecommendSeasonsReq
 };
 
 export interface RecommendSeasonsResponse {
-  seasons?: Array<SeasonCover>,
+  seasons?: Array<SeasonSnapshot>,
 }
 
 export let RECOMMEND_SEASONS_RESPONSE: MessageDescriptor<RecommendSeasonsResponse> = {
@@ -45,7 +45,7 @@ export let RECOMMEND_SEASONS_RESPONSE: MessageDescriptor<RecommendSeasonsRespons
   fields: [
     {
       name: 'seasons',
-      messageType: SEASON_COVER,
+      messageType: SEASON_SNAPSHOT,
       isArray: true,
     },
   ]
