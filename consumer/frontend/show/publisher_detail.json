@@ -1,0 +1,18 @@
+[{
+  "name": "PublisherDetail",
+  "message": {
+    "fields": [{
+      "name": "accountId",
+      "type": "string"
+    }, {
+      "name": "naturalName",
+      "type": "string"
+    }, {
+      "name": "description",
+      "type": "string"
+    }, {
+      "name": "avatarLargePath",
+      "type": "string"
+    }]
+  }
+}]

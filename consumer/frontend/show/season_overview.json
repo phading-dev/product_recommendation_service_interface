@@ -1,5 +1,5 @@
 [{
-  "name": "PublisherOverview",
+  "name": "PublisherSummary",
   "message": {
     "fields": [{
       "name": "accountId",
@@ -21,6 +21,10 @@
     }, {
       "name": "name",
       "type": "string"
+    }, {
+      "name": "length",
+      "type": "number",
+      "comment": "In seconds."
     }]
   }
 }, {
@@ -44,7 +48,7 @@
       "type": "ContinueEpisode"
     }, {
       "name": "publisher",
-      "type": "PublisherOverview"
+      "type": "PublisherSummary"
     }]
   }
 }]

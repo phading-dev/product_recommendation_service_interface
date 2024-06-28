@@ -10,14 +10,26 @@
   "name": "RecommendSeasonsRequestBody",
   "message": {
     "fields": [{
-      "name": "seasonId",
-      "type": "string"
+      "name": "context",
+      "type": "Context"
+    }]
+  }
+}, {
+  "name": "FullContext",
+  "message": {
+    "fields": [{
+      "name": "publisher",
+      "type": "PublisherDetail",
+      "import": "./publisher_detail"
     }]
   }
 }, {
   "name": "RecommendSeasonsResponse",
   "message": {
     "fields": [{
+      "name": "context",
+      "type": "FullContext"
+    }, {
       "name": "seasons",
       "type": "SeasonOverview",
       "import": "./season_overview",
