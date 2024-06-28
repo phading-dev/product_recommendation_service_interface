@@ -1,11 +1,10 @@
 import { MessageDescriptor, PrimitiveType } from '@selfage/message/descriptor';
-import { SeasonSnapshot, SEASON_SNAPSHOT } from './season_snapshot';
+import { SeasonOverview, SEASON_OVERVIEW } from './season_overview';
 import { ServiceDescriptor } from '@selfage/service_descriptor';
 import { CLIENT_SESSION } from '@phading/user_session_service_interface/client_session';
 
 export interface Context {
   publisherId?: string,
-  seriesId?: string,
 }
 
 export let CONTEXT: MessageDescriptor<Context> = {
@@ -13,10 +12,6 @@ export let CONTEXT: MessageDescriptor<Context> = {
   fields: [
     {
       name: 'publisherId',
-      primitiveType: PrimitiveType.STRING,
-    },
-    {
-      name: 'seriesId',
       primitiveType: PrimitiveType.STRING,
     },
   ]
@@ -37,7 +32,7 @@ export let RECOMMEND_SEASONS_REQUEST_BODY: MessageDescriptor<RecommendSeasonsReq
 };
 
 export interface RecommendSeasonsResponse {
-  seasons?: Array<SeasonSnapshot>,
+  seasons?: Array<SeasonOverview>,
 }
 
 export let RECOMMEND_SEASONS_RESPONSE: MessageDescriptor<RecommendSeasonsResponse> = {
@@ -45,7 +40,7 @@ export let RECOMMEND_SEASONS_RESPONSE: MessageDescriptor<RecommendSeasonsRespons
   fields: [
     {
       name: 'seasons',
-      messageType: SEASON_SNAPSHOT,
+      messageType: SEASON_OVERVIEW,
       isArray: true,
     },
   ]

@@ -4,9 +4,6 @@
     "fields": [{
       "name": "publisherId",
       "type": "string"
-    }, {
-      "name": "seriesId",
-      "type": "string"
     }]
   }
 }, {
@@ -22,8 +19,8 @@
   "message": {
     "fields": [{
       "name": "seasons",
-      "type": "SeasonSnapshot",
-      "import": "./season_snapshot",
+      "type": "SeasonOverview",
+      "import": "./season_overview",
       "isArray": true
     }]
   }

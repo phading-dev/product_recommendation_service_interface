@@ -1,13 +1,13 @@
 import { MessageDescriptor, PrimitiveType } from '@selfage/message/descriptor';
 
-export interface PublisherSnapshot {
+export interface PublisherOverview {
   accountId?: string,
   naturalName?: string,
   avatarSmallPath?: string,
 }
 
-export let PUBLISHER_SNAPSHOT: MessageDescriptor<PublisherSnapshot> = {
-  name: 'PublisherSnapshot',
+export let PUBLISHER_OVERVIEW: MessageDescriptor<PublisherOverview> = {
+  name: 'PublisherOverview',
   fields: [
     {
       name: 'accountId',
@@ -43,18 +43,18 @@ export let CONTINUE_EPISODE: MessageDescriptor<ContinueEpisode> = {
   ]
 };
 
-export interface SeasonSnapshot {
+export interface SeasonOverview {
   seasonId?: string,
   name?: string,
   coverImagePath?: string,
 /* Small number means low quality and price. */
   grade?: number,
   continueEpisode?: ContinueEpisode,
-  publisher?: PublisherSnapshot,
+  publisher?: PublisherOverview,
 }
 
-export let SEASON_SNAPSHOT: MessageDescriptor<SeasonSnapshot> = {
-  name: 'SeasonSnapshot',
+export let SEASON_OVERVIEW: MessageDescriptor<SeasonOverview> = {
+  name: 'SeasonOverview',
   fields: [
     {
       name: 'seasonId',
@@ -78,7 +78,7 @@ export let SEASON_SNAPSHOT: MessageDescriptor<SeasonSnapshot> = {
     },
     {
       name: 'publisher',
-      messageType: PUBLISHER_SNAPSHOT,
+      messageType: PUBLISHER_OVERVIEW,
     },
   ]
 };

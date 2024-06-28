@@ -1,5 +1,5 @@
 [{
-  "name": "PublisherSnapshot",
+  "name": "PublisherOverview",
   "message": {
     "fields": [{
       "name": "accountId",
@@ -24,7 +24,7 @@
     }]
   }
 }, {
-  "name": "SeasonSnapshot",
+  "name": "SeasonOverview",
   "message": {
     "fields": [{
       "name": "seasonId",
@@ -44,7 +44,7 @@
       "type": "ContinueEpisode"
     }, {
       "name": "publisher",
-      "type": "PublisherSnapshot"
+      "type": "PublisherOverview"
     }]
   }
 }]
