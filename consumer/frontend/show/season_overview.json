@@ -25,6 +25,10 @@
       "name": "length",
       "type": "number",
       "comment": "In seconds."
+    }, {
+      "name": "publishedTime",
+      "type": "number",
+      "comment": "In seconds."
     }]
   }
 }, {

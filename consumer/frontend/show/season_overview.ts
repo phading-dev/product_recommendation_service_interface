@@ -1,13 +1,13 @@
 import { MessageDescriptor, PrimitiveType } from '@selfage/message/descriptor';
 
-export interface PublisherOverview {
+export interface PublisherSummary {
   accountId?: string,
   naturalName?: string,
   avatarSmallPath?: string,
 }
 
-export let PUBLISHER_OVERVIEW: MessageDescriptor<PublisherOverview> = {
-  name: 'PublisherOverview',
+export let PUBLISHER_SUMMARY: MessageDescriptor<PublisherSummary> = {
+  name: 'PublisherSummary',
   fields: [
     {
       name: 'accountId',
@@ -27,6 +27,10 @@ export let PUBLISHER_OVERVIEW: MessageDescriptor<PublisherOverview> = {
 export interface ContinueEpisode {
   episodeId?: string,
   name?: string,
+/* In seconds. */
+  length?: number,
+/* In seconds. */
+  publishedTime?: number,
 }
 
 export let CONTINUE_EPISODE: MessageDescriptor<ContinueEpisode> = {
@@ -40,6 +44,14 @@ export let CONTINUE_EPISODE: MessageDescriptor<ContinueEpisode> = {
       name: 'name',
       primitiveType: PrimitiveType.STRING,
     },
+    {
+      name: 'length',
+      primitiveType: PrimitiveType.NUMBER,
+    },
+    {
+      name: 'publishedTime',
+      primitiveType: PrimitiveType.NUMBER,
+    },
   ]
 };
 
@@ -50,7 +62,7 @@ export interface SeasonOverview {
 /* Small number means low quality and price. */
   grade?: number,
   continueEpisode?: ContinueEpisode,
-  publisher?: PublisherOverview,
+  publisher?: PublisherSummary,
 }
 
 export let SEASON_OVERVIEW: MessageDescriptor<SeasonOverview> = {
@@ -78,7 +90,7 @@ export let SEASON_OVERVIEW: MessageDescriptor<SeasonOverview> = {
     },
     {
       name: 'publisher',
-      messageType: PUBLISHER_OVERVIEW,
+      messageType: PUBLISHER_SUMMARY,
     },
   ]
 };
