@@ -1,17 +1,10 @@
 [{
-  "name": "Context",
-  "message": {
-    "fields": [{
-      "name": "publisherId",
-      "type": "string"
-    }]
-  }
-}, {
   "name": "RecommendSeasonsRequestBody",
   "message": {
     "fields": [{
       "name": "context",
-      "type": "Context"
+      "type": "RecommendationContext",
+      "import": "./recommendation_context"
     }]
   }
 }, {

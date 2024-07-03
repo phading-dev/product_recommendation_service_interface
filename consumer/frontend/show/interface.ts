@@ -1,25 +1,12 @@
-import { MessageDescriptor, PrimitiveType } from '@selfage/message/descriptor';
+import { MessageDescriptor } from '@selfage/message/descriptor';
+import { RecommendationContext, RECOMMENDATION_CONTEXT } from './recommendation_context';
 import { PublisherDetail, PUBLISHER_DETAIL } from './publisher_detail';
 import { SeasonOverview, SEASON_OVERVIEW } from './season_overview';
 import { ServiceDescriptor } from '@selfage/service_descriptor';
 import { CLIENT_SESSION } from '@phading/user_session_service_interface/client_session';
 
-export interface Context {
-  publisherId?: string,
-}
-
-export let CONTEXT: MessageDescriptor<Context> = {
-  name: 'Context',
-  fields: [
-    {
-      name: 'publisherId',
-      primitiveType: PrimitiveType.STRING,
-    },
-  ]
-};
-
 export interface RecommendSeasonsRequestBody {
-  context?: Context,
+  context?: RecommendationContext,
 }
 
 export let RECOMMEND_SEASONS_REQUEST_BODY: MessageDescriptor<RecommendSeasonsRequestBody> = {
@@ -27,7 +14,7 @@ export let RECOMMEND_SEASONS_REQUEST_BODY: MessageDescriptor<RecommendSeasonsReq
   fields: [
     {
       name: 'context',
-      messageType: CONTEXT,
+      messageType: RECOMMENDATION_CONTEXT,
     },
   ]
 };

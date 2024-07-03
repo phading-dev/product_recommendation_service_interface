@@ -1,0 +1,9 @@
+[{
+  "name": "RecommendationContext",
+  "message": {
+    "fields": [{
+      "name": "publisherId",
+      "type": "string"
+    }]
+  }
+}]
