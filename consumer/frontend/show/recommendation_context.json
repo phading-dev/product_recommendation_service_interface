@@ -2,10 +2,7 @@
   "name": "RecommendationContext",
   "message": {
     "fields": [{
-      "name": "freeForm",
-      "type": "string"
-    }, {
-      "name": "publisherId",
+      "name": "query",
       "type": "string"
     }]
   }
