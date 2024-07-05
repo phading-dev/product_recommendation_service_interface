@@ -2,9 +2,8 @@
   "name": "RecommendSeasonsRequestBody",
   "message": {
     "fields": [{
-      "name": "context",
-      "type": "RecommendationContext",
-      "import": "./recommendation_context"
+      "name": "query",
+      "type": "string"
     }]
   }
 }, {

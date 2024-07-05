@@ -1,9 +1,0 @@
-[{
-  "name": "RecommendationContext",
-  "message": {
-    "fields": [{
-      "name": "query",
-      "type": "string"
-    }]
-  }
-}]
