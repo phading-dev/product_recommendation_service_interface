@@ -4,6 +4,9 @@
     "fields": [{
       "name": "query",
       "type": "string"
+    }, {
+      "name": "cursor",
+      "type": "string"
     }]
   }
 }, {

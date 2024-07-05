@@ -1,6 +1,6 @@
 {
   "name": "@phading/product_recommendation_service_interface",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "The interface of ProductRecommendationService.",
   "repository": {
     "type": "git",

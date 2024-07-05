@@ -6,6 +6,7 @@ import { CLIENT_SESSION } from '@phading/user_session_service_interface/client_s
 
 export interface RecommendSeasonsRequestBody {
   query?: string,
+  cursor?: string,
 }
 
 export let RECOMMEND_SEASONS_REQUEST_BODY: MessageDescriptor<RecommendSeasonsRequestBody> = {
@@ -13,6 +14,10 @@ export let RECOMMEND_SEASONS_REQUEST_BODY: MessageDescriptor<RecommendSeasonsReq
   fields: [
     {
       name: 'query',
+      primitiveType: PrimitiveType.STRING,
+    },
+    {
+      name: 'cursor',
       primitiveType: PrimitiveType.STRING,
     },
   ]
