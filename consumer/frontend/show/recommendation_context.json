@@ -2,6 +2,9 @@
   "name": "RecommendationContext",
   "message": {
     "fields": [{
+      "name": "freeForm",
+      "type": "string"
+    }, {
       "name": "publisherId",
       "type": "string"
     }]
