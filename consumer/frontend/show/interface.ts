@@ -40,6 +40,7 @@ export let FULL_CONTEXT: MessageDescriptor<FullContext> = {
 export interface RecommendSeasonsResponse {
   context?: FullContext,
   seasons?: Array<SeasonOverview>,
+  cursor?: string,
 }
 
 export let RECOMMEND_SEASONS_RESPONSE: MessageDescriptor<RecommendSeasonsResponse> = {
@@ -53,6 +54,10 @@ export let RECOMMEND_SEASONS_RESPONSE: MessageDescriptor<RecommendSeasonsRespons
       name: 'seasons',
       messageType: SEASON_OVERVIEW,
       isArray: true,
+    },
+    {
+      name: 'cursor',
+      primitiveType: PrimitiveType.STRING,
     },
   ]
 };

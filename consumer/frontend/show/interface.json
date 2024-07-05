@@ -29,6 +29,9 @@
       "type": "SeasonOverview",
       "import": "./season_overview",
       "isArray": true
+    }, {
+      "name": "cursor",
+      "type": "string"
     }]
   }
 }, {
