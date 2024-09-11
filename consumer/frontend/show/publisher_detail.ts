@@ -1,4 +1,4 @@
-import { MessageDescriptor, PrimitiveType } from '@selfage/message/descriptor';
+import { PrimitiveType, MessageDescriptor } from '@selfage/message/descriptor';
 
 export interface PublisherDetail {
   accountId?: string,
@@ -9,22 +9,21 @@ export interface PublisherDetail {
 
 export let PUBLISHER_DETAIL: MessageDescriptor<PublisherDetail> = {
   name: 'PublisherDetail',
-  fields: [
-    {
-      name: 'accountId',
-      primitiveType: PrimitiveType.STRING,
-    },
-    {
-      name: 'naturalName',
-      primitiveType: PrimitiveType.STRING,
-    },
-    {
-      name: 'description',
-      primitiveType: PrimitiveType.STRING,
-    },
-    {
-      name: 'avatarLargePath',
-      primitiveType: PrimitiveType.STRING,
-    },
-  ]
+  fields: [{
+    name: 'accountId',
+    index: 1,
+    primitiveType: PrimitiveType.STRING,
+  }, {
+    name: 'naturalName',
+    index: 2,
+    primitiveType: PrimitiveType.STRING,
+  }, {
+    name: 'description',
+    index: 3,
+    primitiveType: PrimitiveType.STRING,
+  }, {
+    name: 'avatarLargePath',
+    index: 4,
+    primitiveType: PrimitiveType.STRING,
+  }],
 };

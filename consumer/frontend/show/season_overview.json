@@ -1,58 +1,71 @@
 [{
-  "name": "PublisherSummary",
   "message": {
+    "name": "PublisherSummary",
     "fields": [{
       "name": "accountId",
-      "type": "string"
+      "type": "string",
+      "index": 1
     }, {
       "name": "naturalName",
-      "type": "string"
+      "type": "string",
+      "index": 2
     }, {
       "name": "avatarSmallPath",
-      "type": "string"
+      "type": "string",
+      "index": 3
     }]
   }
 }, {
-  "name": "ContinueEpisode",
   "message": {
+    "name": "ContinueEpisode",
     "fields": [{
       "name": "episodeId",
-      "type": "string"
+      "type": "string",
+      "index": 1
     }, {
       "name": "name",
-      "type": "string"
+      "type": "string",
+      "index": 2
     }, {
       "name": "length",
       "type": "number",
+      "index": 3,
       "comment": "In seconds."
     }, {
       "name": "publishedTime",
       "type": "number",
+      "index": 4,
       "comment": "In seconds."
     }]
   }
 }, {
-  "name": "SeasonOverview",
   "message": {
+    "name": "SeasonOverview",
     "fields": [{
       "name": "seasonId",
-      "type": "string"
+      "type": "string",
+      "index": 1
     }, {
       "name": "name",
-      "type": "string"
+      "type": "string",
+      "index": 2
     }, {
       "name": "coverImagePath",
-      "type": "string"
+      "type": "string",
+      "index": 3
     }, {
       "name": "grade",
       "type": "number",
+      "index": 4,
       "comment": "Small number means low quality and price."
     }, {
       "name": "continueEpisode",
-      "type": "ContinueEpisode"
+      "type": "ContinueEpisode",
+      "index": 5
     }, {
       "name": "publisher",
-      "type": "PublisherSummary"
+      "type": "PublisherSummary",
+      "index": 6
     }]
   }
 }]

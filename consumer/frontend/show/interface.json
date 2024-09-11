@@ -1,51 +1,60 @@
 [{
-  "name": "RecommendSeasonsRequestBody",
   "message": {
+    "name": "RecommendSeasonsRequestBody",
     "fields": [{
       "name": "query",
-      "type": "string"
+      "type": "string",
+      "index": 1
     }, {
       "name": "cursor",
-      "type": "string"
+      "type": "string",
+      "index": 2
     }]
   }
 }, {
-  "name": "FullContext",
   "message": {
+    "name": "FullContext",
     "fields": [{
       "name": "publisher",
       "type": "PublisherDetail",
-      "import": "./publisher_detail"
+      "import": "./consumer/frontend/show/publisher_detail",
+      "index": 1
     }]
   }
 }, {
-  "name": "RecommendSeasonsResponse",
   "message": {
+    "name": "RecommendSeasonsResponse",
     "fields": [{
       "name": "context",
-      "type": "FullContext"
+      "type": "FullContext",
+      "index": 1
     }, {
       "name": "seasons",
       "type": "SeasonOverview",
-      "import": "./season_overview",
-      "isArray": true
+      "import": "./consumer/frontend/show/season_overview",
+      "isArray": true,
+      "index": 2
     }, {
       "name": "cursor",
-      "type": "string"
+      "type": "string",
+      "index": 3
     }]
   }
 }, {
-  "name": "RecommendSeasons",
-  "service": {
-    "path": "/RecommendSeasons",
-    "body": "RecommendSeasonsRequestBody",
-    "auth": {
-      "key": "auth",
-      "type": "ClientSession",
-      "import": "@phading/user_session_service_interface/client_session"
-    },
-    "response": "RecommendSeasonsResponse",
-    "outputWebClient": "./client_requests",
-    "outputHandler": "./server_handlers"
+  "webService": {
+    "name": "ProductRecommendationConsumerFrontendShowService",
+    "remoteCalls": [{
+      "name": "RecommendSeasons",
+      "path": "/RecommendSeasons",
+      "body": "RecommendSeasonsRequestBody",
+      "auth": {
+        "key": "auth",
+        "type": "ClientSession",
+        "import": "@phading/user_session_service_interface/client_session"
+      },
+      "response": "RecommendSeasonsResponse"
+    }],
+    "outputClient": "./consumer/frontend/show/client",
+    "outputHandler": "./consumer/frontend/show/handler"
   }
 }]

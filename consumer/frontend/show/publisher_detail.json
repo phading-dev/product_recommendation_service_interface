@@ -1,18 +1,22 @@
 [{
-  "name": "PublisherDetail",
   "message": {
+    "name": "PublisherDetail",
     "fields": [{
       "name": "accountId",
-      "type": "string"
+      "type": "string",
+      "index": 1
     }, {
       "name": "naturalName",
-      "type": "string"
+      "type": "string",
+      "index": 2
     }, {
       "name": "description",
-      "type": "string"
+      "type": "string",
+      "index": 3
     }, {
       "name": "avatarLargePath",
-      "type": "string"
+      "type": "string",
+      "index": 4
     }]
   }
 }]

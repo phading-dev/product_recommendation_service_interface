@@ -1,10 +1,10 @@
-import { WebServiceClientInterface, WebServiceClientOptions } from '@selfage/service_descriptor/web_service_client_interface';
 import { RecommendSeasonsRequestBody, RecommendSeasonsResponse, RECOMMEND_SEASONS } from './interface';
+import { WebClientInterface, WebClientOptions } from '@selfage/service_descriptor/client_interface';
 
 export function recommendSeasons(
-  client: WebServiceClientInterface,
+  client: WebClientInterface,
   body: RecommendSeasonsRequestBody,
-  options?: WebServiceClientOptions,
+  options?: WebClientOptions,
 ): Promise<RecommendSeasonsResponse> {
   return client.send(
     {
